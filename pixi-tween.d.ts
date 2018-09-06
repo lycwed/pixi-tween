@@ -10,7 +10,7 @@ interface on {
 }
 
 declare namespace PIXI.tween {
-	interface tweenConfig {
+	export interface tweenConfig {
 		from?: object;
 		to?: object;
 		delay?: number;
@@ -65,7 +65,7 @@ declare namespace PIXI.tween {
 		);
 	}
 
-	class Easing {
+	export interface Easing {
 		inBack(v?: number): Function;
 		inBounce(): Function;
 		inCirc(): Function;
