@@ -10,10 +10,10 @@ interface on {
     update?: Function;
 }
 
-declare namespace PIXI {
-    class Graphics {
-        drawPath(path: PIXI.tween.TweenPath): PIXI.Graphics;
-    }
+declare namespace PIXI.tween {
+    // class Graphics {
+    //    drawPath(path: PIXI.tween.TweenPath): PIXI.Graphics;
+    //}
 
     namespace tween {
         interface tweenConfig {
@@ -133,8 +133,6 @@ declare namespace PIXI {
             quadraticCurveTo(cpX: number, cpY: number, toX: number, toY: number): PIXI.tween.TweenPath;
             totalDistance(): number;
         }
-
-		tweenManager: PIXI.tween.TweenManager;
 	}
 }
 
