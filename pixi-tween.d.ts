@@ -26,16 +26,6 @@ declare namespace PIXI.tween {
 		speed?: number;
 	}
 
-	class TweenManager {
-		constructor();
-		tweens: Array<PIXI.tween.Tween>;
-		addTween(tween: PIXI.tween.Tween);
-		createTween(target: object, config?: PIXI.tween.tweenConfig): PIXI.tween.Tween;
-		getTweensForTarget(target: object): Array<PIXI.tween.Tween>;
-		removeTween(tween: PIXI.tween.Tween);
-		update(deltaMS: number);
-	}
-
 	class Tween {
 		constructor(target: object, manager?: PIXI.tween.TweenManager, config?: PIXI.tween.tweenConfig);
 		readonly active: boolean;
@@ -145,6 +135,16 @@ declare namespace PIXI.tween {
 		parsePoints(): PIXI.tween.TweenPath;
 		quadraticCurveTo(cpX: number, cpY: number, toX: number, toY: number): PIXI.tween.TweenPath;
 		totalDistance(): number;
+	}
+
+	class TweenManager {
+		constructor();
+		tweens: Array<PIXI.tween.Tween>;
+		addTween(tween: PIXI.tween.Tween);
+		createTween(target: object, config?: PIXI.tween.tweenConfig): PIXI.tween.Tween;
+		getTweensForTarget(target: object): Array<PIXI.tween.Tween>;
+		removeTween(tween: PIXI.tween.Tween);
+		update(deltaMS: number);
 	}
 }
 
