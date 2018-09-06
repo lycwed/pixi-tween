@@ -65,7 +65,7 @@ declare namespace PIXI.tween {
 		);
 	}
 
-	interface Easing {
+	class Easing {
 		inBack(v?: number): Function;
 		inBounce(): Function;
 		inCirc(): Function;
