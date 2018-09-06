@@ -10,16 +10,6 @@ interface on {
 }
 
 declare namespace PIXI.tween {
-	interface TweenManager {
-		constructor();
-		tweens: Array<PIXI.tween.Tween>;
-		addTween(tween: PIXI.tween.Tween);
-		createTween(target: object, config?: PIXI.tween.tweenConfig): PIXI.tween.Tween;
-		getTweensForTarget(target: object): Array<PIXI.tween.Tween>;
-		removeTween(tween: PIXI.tween.Tween);
-		update(deltaMS: number);
-	}
-
 	interface tweenConfig {
 		from?: object;
 		to?: object;
@@ -34,6 +24,16 @@ declare namespace PIXI.tween {
 		time?: number;
 		on?: on;
 		speed?: number;
+	}
+
+	class TweenManager {
+		constructor();
+		tweens: Array<PIXI.tween.Tween>;
+		addTween(tween: PIXI.tween.Tween);
+		createTween(target: object, config?: PIXI.tween.tweenConfig): PIXI.tween.Tween;
+		getTweensForTarget(target: object): Array<PIXI.tween.Tween>;
+		removeTween(tween: PIXI.tween.Tween);
+		update(deltaMS: number);
 	}
 
 	class Tween {
